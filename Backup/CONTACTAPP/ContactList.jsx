@@ -1,8 +1,8 @@
 import React,{Component} from "react"
-class ConntactList extends Component{
+class ContactList extends Component{
     contactHandler =(contact)=>{
         //console.log(contact.name.first)
-        this.props.selected_Contacts(contact)
+        this.props.selected_Contact(contact)
     }
     render(){
         return(
@@ -27,14 +27,14 @@ class ConntactList extends Component{
                                 {  
                                   this.props.user_Contacts.map((contact,index) =>{
                                 
-                                    return<tr key ={index} onMouseOver={this.contactHandler.bind(this, contact)}>
-                                        <td>{user.login.uuid.substr(32)}</td>
-                                        <td>{contact.name}</td>
+                                    return <tr key={index} onMouseOver={this.contactHandler.bind(this, contact)}>
+                                        <td>{ contact.login.uuid.substr(32)} </td>
+                                        <td>{contact.name.first}</td>
 
                                         <td>{contact.email}</td>
                                         <td>{contact.gender}</td>
-                            
-                                    </tr>
+                                     </tr>
+                                     
                                 })
                             }
                             </>:null

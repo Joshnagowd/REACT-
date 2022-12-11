@@ -7,10 +7,10 @@ class ContactDetails extends Component{
                 <div className="row">
                     <div className="col">
                         <div className="card">
-                            <div className="cardheader">
+                            <div className="card-header">
                                 <img src={this.props.user_Sel_Contact.picture.large}/>
                                 </div>
-                                <div className="cardbody">
+                                <div className="card-body">
                                     <ul className="list-group">
                                         <li className="list-group-item">{this.props.user_Sel_Contact.name.first}</li>
                                         <li className="list-group-item">{this.props.user_Sel_Contact.name.last}</li>
