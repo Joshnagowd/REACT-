@@ -1,22 +1,31 @@
-import React, { Component } from "react"
-import Relatedapp from './NAVBAR1/Relatedapp'
-/*import Home from './COMPONENTS/Home'
-import About from './COMPONENTS/Contact'
-//import Contact from './COMPONENTS/About'
-import Counter from './HOOKS1/Counter'
-import Message from "./HOOKS1/Message"
-import Message1 from "./HOOKS1/Message1"
-import Product from "./HOOKS1/Product"*/
-import ContactApp from './CONTACTS/ContactApp'
-//import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-class App extends Component {
-  render(){
+import "./App.css"
+import Navbar from "./COMPONENT/Navbar"
+import { Route, Routes } from "react-router-dom";
+
+import Home from './Routes/Home'
+import About from './Routes/About'
+import Services from './Routes/Services'
+import Contact from './Routes/Contact'
+import { Route, Routes } from "react-router-dom";
+function App(){
     return(
-      <div>
-       <Relatedapp/>
-       <ContactApp/>
-      </div>
-    )
-  }
+        <div className="App">
+            <Routes>
+             <Route path="/" element={<Home/>}/>
+             <Route path="/" element={<About/>}/>
+             <Route path="/" element={<Services/>}/>
+             <Route path="/" element={<Contact/>}/>
+
+             
+            </Routes>
+            <h1>App Component</h1>
+             <Navbar/>
+             <Home/>
+             <About/>
+             <Services/>
+
+             <Contact/>
+        </div>
+    );
 }
-export default App
+export default App;
