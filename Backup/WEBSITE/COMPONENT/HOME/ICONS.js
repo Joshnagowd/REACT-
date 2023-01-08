@@ -17,7 +17,7 @@ export const Menuitems =[
         title: 'Menu',
         url : "/menu",
         cName: "nav-links",
-        icon:"fa fa-cutlery"
+        icon:"fa-solid fa-plate-utensils"
 
     },
     
